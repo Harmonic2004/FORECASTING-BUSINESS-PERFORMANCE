@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: region_sales
+    description: "Tổng doanh thu theo từng khu vực (region)"
+    columns:
+      - name: region
+        description: "Khu vực địa lý"
+        tests:
+          - not_null
+          - unique
+      - name: total_revenue
+        description: "Tổng doanh thu"
+        tests:
+          - not_null
+
+  - name: top_states_by_revenue_profit
+    description: "Top 5 bang có tổng doanh thu và lợi nhuận cao nhất/ thấp nhất"
+    columns:
+      - name: state
+        description: "Tên bang"
+        tests:
+          - not_null
+          - unique
+      - name: total_revenue
+        description: "Tổng doanh thu theo bang"
+        tests:
+          - not_null
+      - name: total_profit
+        description: "Tổng lợi nhuận theo bang"
+        tests:
+          - not_null

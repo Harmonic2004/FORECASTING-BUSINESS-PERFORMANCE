@@ -1,0 +1,10 @@
+# Ignore build artifacts
+init-db.sql
+scripts/spark/jars/
+scripts/venv/
+dbt/.dbt/
+dbt/dbt_venv/
+
+# Ignore large libraries
+*.so
+*.jar

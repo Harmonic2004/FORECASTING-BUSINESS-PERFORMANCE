@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: int_sales_enriched
+    description: >
+      Bảng dữ liệu trung gian được làm giàu từ stg_salesfact, stg_geography và stg_product.
+      Bảng này kết hợp thông tin bán hàng, địa lý và sản phẩm để phục vụ phân tích ở tầng marts.
+
+    columns:
+      - name: sale_date
+        description: Ngày diễn ra giao dịch bán hàng.
+        tests:
+          - not_null
+
+      - name: product_id
+        description: Mã định danh của sản phẩm.
+        tests:
+          - not_null
+
+      - name: units
+        description: Số lượng sản phẩm đã bán.
+
+      - name: revenue
+        description: Tổng doanh thu từ giao dịch.
+
+      - name: cogs
+        description: Giá vốn hàng bán (Cost of Goods Sold).
+
+      - name: profit
+        description: Lợi nhuận thu được từ giao dịch.
+
+      - name: city
+        description: Thành phố nơi giao dịch diễn ra.
+
+      - name: state
+        description: Bang nơi giao dịch diễn ra.
+
+      - name: region
+        description: Khu vực địa lý.
+
+      - name: district
+        description: Quận/huyện của giao dịch.
+
+      - name: category
+        description: Loại sản phẩm (Category).
+
+      - name: segment
+        description: Phân khúc sản phẩm.
+
+      - name: product
+        description: Tên sản phẩm.

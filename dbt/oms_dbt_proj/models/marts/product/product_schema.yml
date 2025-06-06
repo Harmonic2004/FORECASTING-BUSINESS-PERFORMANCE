@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: segment_profit_top5_states
+    description: "Tổng lợi nhuận trên từng phân khúc sản phẩm ở top 5 bang có tổng doanh thu cao nhất, thấp nhất"
+    columns:
+      - name: state
+        description: "Tên bang"
+        tests:
+          - not_null
+      - name: segment
+        description: "Phân khúc sản phẩm"
+        tests:
+          - not_null
+      - name: total_profit
+        description: "Tổng lợi nhuận"
+        tests:
+          - not_null
+      # Test unique cho cặp khóa có thể thêm như sau:
+      # (Cần tạo macro custom để test unique composite hoặc dùng dbt-utils)
+      # - dbt_utils.unique_combination_of_columns:
+      #     combination_of_columns:
+      #       - state
+      #       - segment
+
+  - name: product_profit_analysis
+    description: "Phân tích tổng lợi nhuận theo các mã sản phẩm"
+    columns:
+      - name: product_id
+        description: "Mã sản phẩm"
+        tests:
+          - not_null
+          - unique
+      - name: product
+        description: "Tên sản phẩm"
+        tests:
+          - not_null
+      - name: total_profit
+        description: "Tổng lợi nhuận theo sản phẩm"
+        tests:
+          - not_null
