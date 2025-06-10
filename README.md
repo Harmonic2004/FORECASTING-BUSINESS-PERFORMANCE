@@ -57,7 +57,7 @@ Dashboard được tạo bằng apache Superset nhằm minh họa xu hướng do
 
 ## Dự đoán
 Sử dụng các model time series như arima và Xgboot để dự doán doanh thu và lợi nhuận. Để xem chi tiết kết quả hãy xem trong slide dưới đây.
-![Slide](https://drive.google.com/file/d/13_bjXA_vS3H8W8r3q9eSS_ehv5DClfUr/view?usp=drive_link)
+[Slide](https://drive.google.com/file/d/13_bjXA_vS3H8W8r3q9eSS_ehv5DClfUr/view?usp=drive_link)
 
 
 
